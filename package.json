@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"✔ Tests succeeded ¯_(ツ)_/¯\" && exit 0",
-    "doc": "jsdoc -c jsdoc.json README.md"
+    "doc": "jsdoc -c jsdoc.json"
   },
   "repository": {
     "type": "git",

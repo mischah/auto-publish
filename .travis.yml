@@ -1,3 +1,27 @@
 language: node_js
-node_js:
-  - v6
+node_js: v6
+after_success: ./deploy.sh
+env:
+  global:
+  - COMMIT_AUTHOR_EMAIL: "spam.me@michael-kuehnel.de"
+  - COMMIT_AUTHOR_NAME: "Travis CI"
+  - SOURCE_BRANCH: "master"
+  - TARGET_BRANCH: "gh-pages"
+  - DOCS_DIR: "../yeoman-generator-doc"
+  # GH_OAUTH_TOKEN is the oauth token generated as described at
+  # https://help.github.com/articles/creating-an-oauth-token-for-command-line-use
+  #
+  # `curl -u 'mischah' -d '{"scopes":["repo"],"note":"push to gh-pages from travis"}' https://api.github.com/authorizations`
+  #
+  # It returns a OAuth token which must be encrypted using the travis CLI:
+  # https://github.com/travis-ci/travis.rb#installation
+  #
+  # (Users with two-factor authentication enabled should set up an OAuth token
+  # through the web UI: https://github.com/settings/tokens)
+  #
+  # `travis encrypt GH_OAUTH_TOKEN=XXXXXXXXXXXXXXX`
+  #
+  # It returns encrypted key you must store in your travis env below
+  - secure: msPCTio3yd48Xyw5vo7zPf9WxTIrEoYasbqgfvu9sCTUuUjFNaLnvxxZnRISW0sa4xVabyMBsISvx0e1lmWcRtnbsQV2W000vVaLOgE+Nh0ek9uXutBPcg1ibNWjjOO80EP2LV8JZQI9ewa+6xWfNcvjwVVMD4f3dpdUBZUyEraYYjmJQGrSJRbvBlu4RYdyQX44xXNkX1pA6QU/h4AbEsXQa//jOjrb12GMCH++mD9rbLNcCJoup71UwSCQf47SqUa/uXqLiTl3thk9jep+nLHTLoBm4Y9ttnEaDoo+dVfT8MdyC4ffpgwi064Qna2thRP996e8tFJ1rUojo/EHwKFfKwKTHl+LsKlBM9TBgucr5Yr87pcmoUJedLQQ8u5NuvyjmVXQpcCnPUXZ+1ZSsGV5mDcrzz0KyKt+BisM98xas0TGF0jMdzMHXFKZO6fgq1sPWxr+dGZPuA6st5CykRAo6kpFOTseBpWNNn6khvCSBJTc8sjJkVi7e2SjnGFNBtFpwrWYo/SNX5GzQib2Nhh+gxAzYukG2Y72hnE5gTdnt3bJfBxSgqeSYG252kujLZGtO/7J6jbd5YWXIDP5sVLeVez51y+GYZgg/f1BejpOaF0TJ6GnqkwZ5iyZ8K5H6/bDn3sCncukty+j6LF94VEJf6oa+fjRSLVz+ANpIxk=
+  - GH_OWNER: mischah
+  - GH_PROJECT_NAME: test-auto-publishing-gh-pages
