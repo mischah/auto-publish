@@ -1,0 +1,23 @@
+{
+  "name": "test-auto-publishing-gh-pages",
+  "version": "1.0.0",
+  "description": "Just a test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"✔ Tests succeeded ¯_(ツ)_/¯\" && exit 0",
+    "doc": "jsdoc -c jsdoc.json README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mischah/test-auto-publishing-gh-pages.git"
+  },
+  "author": "Michael Kühnel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mischah/test-auto-publishing-gh-pages/issues"
+  },
+  "homepage": "https://github.com/mischah/test-auto-publishing-gh-pages#readme",
+  "devDependencies": {
+    "jsdoc": "^3.4.2"
+  }
+}
