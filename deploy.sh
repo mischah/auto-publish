@@ -7,7 +7,11 @@ REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
-# echo -e "Repo=$REPO\n"
+# Pull Only build and deploy docs when the current build is for a Git tag.
+if [[ $TRAVIS_TAG == "" ]]; then
+    echo "Not a build for a Git tag. Skipping generating and deploying the docs."
+    exit 0
+fi
 
 # Create $DOCS_DIR
 mkdir $DOCS_DIR

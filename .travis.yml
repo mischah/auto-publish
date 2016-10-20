@@ -21,7 +21,7 @@ env:
   #
   # `travis encrypt GH_OAUTH_TOKEN=XXXXXXXXXXXXXXX`
   #
-  # It returns encrypted key you must store in your travis env below
+  # It returns encrypted key you must assign to the `secure` property below
   - secure: msPCTio3yd48Xyw5vo7zPf9WxTIrEoYasbqgfvu9sCTUuUjFNaLnvxxZnRISW0sa4xVabyMBsISvx0e1lmWcRtnbsQV2W000vVaLOgE+Nh0ek9uXutBPcg1ibNWjjOO80EP2LV8JZQI9ewa+6xWfNcvjwVVMD4f3dpdUBZUyEraYYjmJQGrSJRbvBlu4RYdyQX44xXNkX1pA6QU/h4AbEsXQa//jOjrb12GMCH++mD9rbLNcCJoup71UwSCQf47SqUa/uXqLiTl3thk9jep+nLHTLoBm4Y9ttnEaDoo+dVfT8MdyC4ffpgwi064Qna2thRP996e8tFJ1rUojo/EHwKFfKwKTHl+LsKlBM9TBgucr5Yr87pcmoUJedLQQ8u5NuvyjmVXQpcCnPUXZ+1ZSsGV5mDcrzz0KyKt+BisM98xas0TGF0jMdzMHXFKZO6fgq1sPWxr+dGZPuA6st5CykRAo6kpFOTseBpWNNn6khvCSBJTc8sjJkVi7e2SjnGFNBtFpwrWYo/SNX5GzQib2Nhh+gxAzYukG2Y72hnE5gTdnt3bJfBxSgqeSYG252kujLZGtO/7J6jbd5YWXIDP5sVLeVez51y+GYZgg/f1BejpOaF0TJ6GnqkwZ5iyZ8K5H6/bDn3sCncukty+j6LF94VEJf6oa+fjRSLVz+ANpIxk=
   - GH_OWNER: mischah
   - GH_PROJECT_NAME: test-auto-publishing-gh-pages
