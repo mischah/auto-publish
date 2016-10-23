@@ -44,6 +44,12 @@ cd $DOCS_DIR
 git config user.name $COMMIT_AUTHOR_NAME
 git config user.email $COMMIT_AUTHOR_EMAIL
 
+# Exit if there are no changes to the generated content
+if [ -z "$(git status --porcelain)" ]; then
+    echo "No changes to the output on this run; exiting."
+    exit 0
+fi
+
 # Commit the new of the new version
 git add .
 git commit -m "Deploy docs to GitHub Pages ($TRAVIS_TAG)"
