@@ -11,7 +11,6 @@ env:
   - SOURCE_BRANCH: "master"
   - TARGET_BRANCH: "gh-pages"
   - DOCS_DIR: "../yeoman-generator-doc"
-  - PACKAGE_NAME: "auto-publish"
   # GH_OAUTH_TOKEN is the oauth token generated as described at
   # https://help.github.com/articles/creating-an-oauth-token-for-command-line-use
   #
