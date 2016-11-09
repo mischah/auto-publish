@@ -1,6 +1,6 @@
 {
   "name": "auto-publish",
-  "version": "1.0.0",
+  "version": "2.0.2",
   "description": "Just a test",
   "main": "index.js",
   "scripts": {
