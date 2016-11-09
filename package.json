@@ -1,5 +1,5 @@
 {
-  "name": "test-auto-publishing-gh-pages",
+  "name": "auto-publish",
   "version": "1.0.0",
   "description": "Just a test",
   "main": "index.js",
