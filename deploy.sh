@@ -55,7 +55,7 @@ if [ -z "$(git status --porcelain)" ]; then
 fi
 
 # Commit the new of the new version
-git add .
+git add --all .
 git commit -m "Deploy docs to GitHub Pages ($TRAVIS_TAG)"
 echo -e "Comitted docs to $TARGET_BRANCH\n"
 
